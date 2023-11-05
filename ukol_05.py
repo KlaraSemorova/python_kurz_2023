@@ -9,22 +9,22 @@ teploty = [
     [0.4, 2.7, 1.3, -2.8]
 ]
 
-# prumerne teploty pro každý den
+# 1. prumerne teploty pro kazdy den
 def prumer(den):
     return sum(den)/len(den)
 
 prumerne_teploty = [prumer(dny) for dny in teploty]
 print(prumerne_teploty)
 
-# ranní teploty
+# 2. ranni teploty
 ranni_teploty = [dny[0] for dny in teploty]
 print(ranni_teploty)
 
-# ranní teploty
-vecerni_teploty = [dny[2] for dny in teploty]
-print(vecerni_teploty)
+# 3. nocni teploty
+nocni_teploty = [dny[3] for dny in teploty]
+print(nocni_teploty)
 
-# ranní teploty
+# 4. poledni a nocni teploty
 def poledne_noc(den):
     return [den[1], den[3]]
 
